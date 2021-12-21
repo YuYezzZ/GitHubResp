@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    引入vue框架，一定要放在其他要用vue框架的js前面-->
+    <script src="js/vue.js"></script>
+<!--    引入axios框架-->
+    <script src="js/axios-0.18.0.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="element-ui/lib/index.js"></script>
+<!--    表格样式-->
+    <style>
+        .el-table .warning-row {
+            background: oldlace;
+        }
+
+        .el-table .success-row {
+            background: #f0f9eb;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+<!--    搜索表单-->
+    <el-form :inline="true" :model="brandCondition" class="demo-form-inline">
+        <el-form-item label="商品状态">
+            <el-select v-model="brandCondition.status" placeholder="状态">
+                <el-option label="启用" value="1"></el-option>
+                <el-option label="禁用" value="0"></el-option>
+            </el-select>
+        </el-form-item>
+        <el-form-item label="品牌名称">
+            <el-input v-model="brandCondition.brandName" placeholder="品牌名称"></el-input>
+        </el-form-item>
+        <el-form-item label="公司名称">
+            <el-input v-model="brandCondition.companyName" placeholder="公司名称"></el-input>
+        </el-form-item>
+
+        <el-form-item>
+            <el-button type="primary" @click="ConditionQuery()">查询</el-button>
+        </el-form-item>
+    </el-form>
+<!--删除/新增栏-->
+    <el-row>
+        <el-button type="danger">批量删除</el-button>
+        <el-button type="success" @click="dialogVisible = true">新增商品</el-button>
+<!--        新增弹框-->
+        <el-dialog
+                title="提示"
+                :visible.sync="dialogVisible"
+                width="30%"
+                :before-close="handleClose">
+            <el-form ref="form" :model="brandAdd" label-width="80px">
+                <el-form-item label="品牌名称">
+                    <el-input v-model="brandAdd.brandName"></el-input>
+                </el-form-item>
+                <el-form-item label="公司名称">
+                    <el-input v-model="brandAdd.companyName"></el-input>
+                </el-form-item>
+                <el-form-item label="排序">
+                    <el-input v-model="brandAdd.ordered"></el-input>
+                </el-form-item>
+                <el-form-item label="描述">
+                    <el-input type="textarea" v-model="brandAdd.description"></el-input>
+                </el-form-item>
+                <el-form-item label="状态">
+                    <el-switch v-model="brandAdd.status" active-value="1" inactive-value="0"></el-switch>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary" @click="addBrand">立即创建</el-button>
+                    <el-button @click="dialogVisible = false">取消</el-button>
+                </el-form-item>
+            </el-form>
+  </span>
+        </el-dialog>
+    </el-row>
+<!--    修改弹窗-->
+    <el-dialog
+            title="提示"
+            :visible.sync="dialogVisible2"
+            width="30%"
+            :before-close="handleClose">
+        <el-form ref="form" :model="brandUpdate" label-width="80px">
+            <el-form-item label="品牌名称">
+                <el-input v-model="brandUpdate.brandName"></el-input>
+            </el-form-item>
+            <el-form-item label="公司名称">
+                <el-input v-model="brandUpdate.companyName"></el-input>
+            </el-form-item>
+            <el-form-item label="排序">
+                <el-input v-model="brandUpdate.ordered"></el-input>
+            </el-form-item>
+            <el-form-item label="描述">
+                <el-input type="textarea" v-model="brandUpdate.description"></el-input>
+            </el-form-item>
+            <el-form-item label="状态">
+                <el-switch v-model="brandUpdate.status" active-value="1" inactive-value="0">{{brandUpdate.status}}</el-switch>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary" @click="updateBrand">修改</el-button>
+                <el-button @click="dialogVisible2 = false">取消</el-button>
+            </el-form-item>
+        </el-form>
+        </span>
+    </el-dialog>
+    </el-row>
+<!--    表格-->
+    <template>
+        <el-table
+                :data="brands"
+                style="width: 100%"
+                align="center"
+                :row-class-name="tableRowClassName"
+                @selection-change="handleSelectionChange">
+            <el-table-column
+                    type="selection"
+                    width="55">
+            </el-table-column>
+            <el-table-column
+                    type="index"
+                    :index="indexMethod"
+                    align="center">
+            </el-table-column>
+            <el-table-column
+                    prop="brandName"
+                    label="品牌名称"
+                    align="center"
+                    >
+            </el-table-column>
+            <el-table-column
+                    prop="companyName"
+                    label="公司名称"
+                    align="center">
+            </el-table-column>
+            <el-table-column
+                    prop="ordered"
+                    label="排序"
+                    sortable
+                    align="center">
+            </el-table-column>
+            <el-table-column
+                    prop="description"
+                    label="描述"
+                    align="center">
+            </el-table-column>
+            <el-table-column
+                    prop="status"
+                    label="状态"
+                    align="center">
+            </el-table-column>
+            <el-table-column
+                    prop="id"
+                    label="编辑"
+                    align="center">
+                    <template slot-scope="scope">
+                        <el-button type="primary" round  @click="update(scope.row)" >修改</el-button>
+                        <el-button type="danger" round>删除</el-button>
+                    </template>
+                    
+            </el-table-column>
+        </el-table>
+    </template>
+
+<!--分页跳转-->
+    <span class="demonstration">分页</span>
+    <el-pagination
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+            :current-page="currentPage4"
+            :page-sizes="[5, 10, 15, 20]"
+            :page-size="5"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="100"
+            hide-on-single-page="false">
+    </el-pagination>
+</div>
+
+
+<script>
+new Vue({
+    el:"#app",
+    methods: {
+        //表格颜色方法
+        tableRowClassName({row, rowIndex}) {
+            if (rowIndex % 2 == 1) {
+                return 'warning-row';
+            } else if (rowIndex % 2 == 0) {
+                return 'success-row';
+            }
+            return '';
+        },
+        //排序方法
+        indexMethod(index) {
+            return index + 1;
+        },
+        //复选框方法
+        handleSelectionChange(val) {
+            this.multipleSelection = val;
+        },
+        //条件查询方法
+        ConditionQuery() {
+            let _this = this;
+            //获取所有表单请求
+            axios({
+                method: "get",
+                url: "/Brand/brand/selectCondition",
+                params: {
+                    brand: _this.brandCondition
+                }
+            }).then(function (resp) {
+                _this.brands = resp.data
+            })
+        },
+        //提交方法
+        onSubmit() {
+            console.log("submit!");
+        },
+        //取消弹窗
+        handleClose(done) {
+            this.$confirm('确认关闭？')
+                .then(_ => {
+                    done();
+                })
+                .catch(_ => {
+                });
+        },
+        //分页方法
+        handleSizeChange(val) {
+            console.log(`每页 ${val} 条`);
+        },
+        handleCurrentChange(val) {
+            console.log(`当前页: ${val}`);
+        },
+        //    新增商品方法
+        addBrand() {
+            let _this = this;
+            axios({
+                method: "post",
+                url: "/Brand/brand/addBrand",
+                data: _this.brandAdd
+            }).then(function (resp) {
+                if (resp.data) {
+                    _this.$notify({
+                        title: '成功',
+                        message: '添加商品成功',
+                        type: 'success'
+                    });
+                    _this.dialogVisible = false;
+                    axios({
+                        method: "get",
+                        url: "/Brand/brand/selectAll"
+                    }).then(function (resp) {
+                        _this.brands = resp.data
+                    });
+                } else {
+                    _this.$notify.error({
+                        title: '错误',
+                        message: '添加商品失败'
+                    });
+                    _this.dialogVisible = true;
+                    axios({
+                        method: "get",
+                        url: "/Brand/brand/selectAll"
+                    }).then(function (resp) {
+                        _this.brands = resp.data
+                    });
+                }
+            })
+        },
+        //    修改方法
+        update(row) {
+            this.brandUpdate = row;
+            this.dialogVisible2=true;
+            alert(this.brandUpdate.id);
+            //获取所有表单请求
+            /*axios({
+                method: "post",
+                url: "/Brand/brand/selectById",
+                data: _this.id=row.id
+            }).then(function (resp) {
+                _this.brandUpdate = resp.data
+            })*/
+
+        },
+        updateBrand() {
+            let _this = this;
+            axios({
+                method: "post",
+                url: "/Brand/brand/updateBrand",
+                data: _this.brandUpdate
+            }).then(function (resp) {
+                if (resp.data) {
+                    _this.$notify({
+                        title: '成功',
+                        message: '修改商品成功',
+                        type: 'success'
+                    });
+                    _this.dialogVisible2 = false;
+                    axios({
+                        method: "get",
+                        url: "/Brand/brand/selectAll"
+                    }).then(function (resp) {
+                        _this.brands = resp.data
+                    });
+                } else {
+                    _this.$notify.error({
+                        title: '错误',
+                        message: '修改商品失败'
+                    });
+                    _this.dialogVisible2 = true;
+                    axios({
+                        method: "get",
+                        url: "/Brand/brand/selectAll"
+                    }).then(function (resp) {
+                        _this.brands = resp.data
+                    });
+                }
+            })
+        }
+    },
+    data() {
+        return {
+            //表格数据
+            brands: [],
+            //复选框数据
+            multipleSelection: [],
+            //弹窗控制
+            //新增
+            dialogVisible: false,
+            //修改
+            dialogVisible2: false,
+            //商品对象
+            brand: {
+                brandName: '',
+                companyName: '',
+                ordered: '',
+                description: '',
+                status: ''
+            },
+            //条件查询数据
+            brandCondition: {
+                brandName: null,
+                companyName: null,
+                ordered: '',
+                description: '',
+                status: null
+                },
+            //新增商品数据
+            brandAdd: {
+                brandName: '',
+                companyName: '',
+                ordered: '',
+                description: '',
+                status: ''
+            },//修改商品数据
+            brandUpdate: {
+                id:'',
+                brandName: '',
+                companyName: '',
+                ordered: '',
+                description: '',
+                status: ''
+            },
+            //   修改获取的id信息
+            id:'',
+            //分页显示脚标数目
+            currentPage4: 4
+
+        }
+    },
+    mounted(){
+        let _this = this;
+        //获取所有表单请求
+        axios({
+            method:"get",
+            url:"/Brand/brand/selectAll"
+        }).then(function (resp){
+           _this.brands= resp.data
+        })
+    }
+})
+</script>
+</body>
+</html>
