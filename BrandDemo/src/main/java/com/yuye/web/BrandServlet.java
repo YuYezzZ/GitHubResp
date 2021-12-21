@@ -10,9 +10,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Enumeration;
 import java.util.List;
-import java.util.Map;
 
 @WebServlet("/brand/*")
 public class BrandServlet extends BaseServlet {
@@ -46,21 +44,21 @@ public class BrandServlet extends BaseServlet {
     }
     //通过id查询商品
     public void selectById(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-        String id = request.getParameter("id");
+        BufferedReader reader = request.getReader();
+        String s = reader.readLine();
+        int id = Integer.parseInt(s);
         System.out.println(id);
-        Integer id2= Integer.getInteger(id);
-        System.out.println(id2);
-        Brand brand = brandService.selectById(id2);
+        Brand brand = brandService.selectById(id);
         String brandJson = JSON.toJSONString(brand);
+        System.out.println(brandJson);
         response.setContentType("text/json;charset=utf-8");
         response.getWriter().write(brandJson);
     }
 //    修改信息
     public void updateBrand(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String brandUpdateJson = request.getParameter("brandUpdate");
-        System.out.println(brandUpdateJson);
-        Brand brand = JSON.parseObject(brandUpdateJson,Brand.class);
+        BufferedReader reader = request.getReader();
+        String s = reader.readLine();
+        Brand brand = JSON.parseObject(s,Brand.class);
         System.out.println(brand);
         brandService.updateBrand(brand);
         response.getWriter().write("true");

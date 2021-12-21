@@ -97,10 +97,10 @@
                 <el-input type="textarea" v-model="brandUpdate.description"></el-input>
             </el-form-item>
             <el-form-item label="状态">
-                <el-switch v-model="brandUpdate.status" active-value="1" inactive-value="0">{{brandUpdate.status}}</el-switch>
+                <el-switch v-model="brandUpdate.status" active-value="1" inactive-value="0"></el-switch>
             </el-form-item>
             <el-form-item>
-                <el-button type="primary" @click="updateBrand">修改</el-button>
+                <el-button type="primary" @click="updateBrand">确认修改</el-button>
                 <el-button @click="dialogVisible2 = false">取消</el-button>
             </el-form-item>
         </el-form>
@@ -272,17 +272,17 @@ new Vue({
         },
         //    修改方法
         update(row) {
-            this.brandUpdate = row;
-            this.dialogVisible2=true;
-            alert(this.brandUpdate.id);
+            let _this=this;
+            _this.id =row.id;
+            _this.dialogVisible2=true;
             //获取所有表单请求
-            /*axios({
+            axios({
                 method: "post",
                 url: "/Brand/brand/selectById",
-                data: _this.id=row.id
+                data: _this.id
             }).then(function (resp) {
                 _this.brandUpdate = resp.data
-            })*/
+            })
 
         },
         updateBrand() {
