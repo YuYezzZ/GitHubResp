@@ -7,6 +7,7 @@
         <result column="brand_name" property="brandName"></result>
         <result column="company_name" property="companyName"></result>
     </resultMap>
+
     <select id="selectCondition" resultMap="BrandResultMap">
         select * from tb_brand
         <where>
@@ -21,4 +22,11 @@
             </if>
         </where>
     </select>
+
+    <delete id="deleteByIds">
+        delete from tb_brand where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+        #{id}
+        </foreach>
+    </delete>
 </mapper>

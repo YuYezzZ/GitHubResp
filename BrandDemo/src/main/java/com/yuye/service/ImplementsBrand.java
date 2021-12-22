@@ -54,4 +54,41 @@ public class ImplementsBrand implements BrandService {
         session.commit();
         session.close();
     }
+
+    @Override
+    public void deleteById(int id) {
+        SqlSession session = sqlSessionFactory.openSession();
+        BrandMapper mapper = session.getMapper(BrandMapper.class);
+        mapper.deleteById(id);
+        session.commit();
+        session.close();
+    }
+
+    @Override
+    public void deleteByIds(int[] ids) {
+        SqlSession session = sqlSessionFactory.openSession();
+        BrandMapper mapper = session.getMapper(BrandMapper.class);
+        mapper.deleteByIds(ids);
+        session.commit();
+        session.close();
+    }
+
+    @Override
+    public List<Brand> selectLimit(int begin, int pageSize) {
+        SqlSession session = sqlSessionFactory.openSession();
+        BrandMapper mapper = session.getMapper(BrandMapper.class);
+        List<Brand> brands = mapper.selectLimit(begin, pageSize);
+        session.close();
+        return brands;
+    }
+
+    @Override
+    public int totalCount() {
+        SqlSession session = sqlSessionFactory.openSession();
+        BrandMapper mapper = session.getMapper(BrandMapper.class);
+        int totalCount = mapper.totalCount();
+        session.close();
+        return totalCount;
+    }
+
 }

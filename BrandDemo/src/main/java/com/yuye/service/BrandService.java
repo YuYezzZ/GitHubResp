@@ -1,6 +1,7 @@
 package com.yuye.service;
 
 import com.yuye.pojo.Brand;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -20,4 +21,12 @@ public interface BrandService {
     Brand selectById(int id);
 
     void updateBrand(Brand brand);
+
+    void deleteById(int id);
+
+    void deleteByIds(int[] ids);
+
+    List<Brand> selectLimit(int begin, int pageSize);
+
+    int totalCount();
 }
