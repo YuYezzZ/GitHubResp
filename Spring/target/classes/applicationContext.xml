@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--无惨创建-->
+    <!--<bean id="userDao" class="com.yuye.dao.impl.UserDaoImpl" scope="singleton" init-method="init" destroy-method="destroy"></bean>-->
+    <!--静态工厂创建-->
+    <!--<bean id="userDao" class="com.yuye.factory.StaticFactory" factory-method="getUserDao"></bean>-->
+    <!--工厂创建-->
+    <!--<bean id="factory" class="com.yuye.factory.DynamicFactory"></bean>
+    <bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>-->
+    <!--依赖注入-->
+    <bean id="userDao" class="com.yuye.dao.impl.UserDaoImpl"></bean>
+    <bean id="userService" class="com.yuye.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+</beans>
