@@ -4,7 +4,7 @@ import com.yuye.dao.UserDao;
 
 public class UserDaoImpl implements UserDao {
     public UserDaoImpl() {
-        System.out.println("userDaoImpl无参构造被调用");
+       /* System.out.println("userDaoImpl无参构造被调用");*/
     }
     //初始化方法
     public void init(){

@@ -2,16 +2,86 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!--无惨创建-->
+<!--无惨创建-->
     <!--<bean id="userDao" class="com.yuye.dao.impl.UserDaoImpl" scope="singleton" init-method="init" destroy-method="destroy"></bean>-->
-    <!--静态工厂创建-->
+<!--静态工厂创建-->
     <!--<bean id="userDao" class="com.yuye.factory.StaticFactory" factory-method="getUserDao"></bean>-->
-    <!--工厂创建-->
+<!--工厂创建-->
     <!--<bean id="factory" class="com.yuye.factory.DynamicFactory"></bean>
     <bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>-->
-    <!--依赖注入-->
-    <bean id="userDao" class="com.yuye.dao.impl.UserDaoImpl"></bean>
+<!--依赖注入-->
+    <!--set注入-->
+    <!--<bean id="userDao" class="com.yuye.dao.impl.UserDaoImpl"></bean>
     <bean id="userService" class="com.yuye.service.impl.UserServiceImpl">
         <property name="userDao" ref="userDao"></property>
+    </bean>-->
+    <!--<bean id="userService" class="com.yuye.service.impl.UserServiceImpl" p:userDao-ref="userDao"  />-->
+    <!--构造注入-->
+    <bean id="userDao" class="com.yuye.dao.impl.UserDaoImpl"></bean>
+    <bean id="userService" class="com.yuye.service.impl.UserServiceImpl">
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
     </bean>
+    <!--普通数据类型注入-->
+    <bean id="userDao2" class="com.yuye.dao.impl.UserDaoImpl2">
+        <!--set注入-->
+        <!--<property name="userName" value="张三"></property>
+        <property name="age" value="18"></property>-->
+        <!--构造注入-->
+        <constructor-arg name="userName" value="李四"></constructor-arg>
+        <constructor-arg name="age" value="17"></constructor-arg>
+    </bean>
+    <!--引用数据类型注入-->
+    <bean id="user1" class="com.yuye.pojo.User">
+        <property name="name" value="张三"></property>
+        <property name="age" value="18"></property>
+    </bean>
+    <bean id="user2" class="com.yuye.pojo.User">
+        <property name="name" value="李四"></property>
+        <property name="age" value="17"></property>
+    </bean>
+    <bean id="userDao3" class="com.yuye.dao.impl.UserDaoImpl3">
+        <!--set注入-->
+        <!--<property name="strList" >
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </list>
+        </property>
+        <property name="map" >
+            <map>
+                <entry key="1" value-ref="user1"></entry>
+                <entry key="2" value-ref="user2"></entry>
+            </map>
+        </property>
+        <property name="properties" >
+            <props>
+                <prop key="1">eee</prop>
+                <prop key="2">fff</prop>
+                <prop key="3">ggg</prop>
+            </props>
+        </property>-->
+        <!--构造注入-->
+        <constructor-arg name="strList">
+                <list>
+                    <value>aaa</value>
+                    <value>bbb</value>
+                    <value>ccc</value>
+                </list>
+        </constructor-arg>
+        <constructor-arg name="map" >
+            <map>
+                <entry key="1" value-ref="user1"></entry>
+                <entry key="2" value-ref="user2"></entry>
+            </map>
+        </constructor-arg>
+        <constructor-arg name="properties" >
+            <props>
+                <prop key="1">eee</prop>
+                <prop key="2">fff</prop>
+                <prop key="3">ggg</prop>
+            </props>
+        </constructor-arg>
+    </bean>
+
 </beans>
