@@ -11,7 +11,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class DataSourceTest {
+class DataSourceTest {
     @Test
     //测试c3p0
     public void test1() throws PropertyVetoException, SQLException {
@@ -82,6 +82,15 @@ public class DataSourceTest {
     @Test
     //spring框架配置druid
     public void test6() throws SQLException {
+        ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
+        DataSource dataSource = (DataSource) app.getBean("dataSource2");
+        Connection connection = dataSource.getConnection();
+        System.out.println(connection);
+        connection.close();
+    }
+    @Test
+    //spring框架context配置mysql
+    public void test7() throws SQLException {
         ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
         DataSource dataSource = (DataSource) app.getBean("dataSource2");
         Connection connection = dataSource.getConnection();

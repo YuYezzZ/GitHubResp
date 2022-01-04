@@ -12,6 +12,7 @@
     <bytecodeTargetLevel>
       <module name="spring_ioc" target="8" />
       <module name="Spring_ioc" target="8" />
+      <module name="spring_mvc" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
