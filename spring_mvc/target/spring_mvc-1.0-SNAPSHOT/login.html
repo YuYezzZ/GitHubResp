@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/spring_mvc_war_exploded/js/vue.js"></script>
+    <script src="/spring_mvc_war_exploded/js/axios-0.18.0.js"></script>
+    <script src="/spring_mvc_war_exploded/js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>{{user.username}}请登录！</h1>
+    <h1>{{user.password}}请登录！</h1>
+
+    <form>
+        <table>
+            <tr>
+                <td>账号：</td>
+                <td><input type="text" name="list[0].username"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="text" name="list[0].age"></td>
+            </tr>
+            <tr>
+            <tr>
+                <td>账号：</td>
+                <td><input type="text" name="list[1].username"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="text" name="list[1].age"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="submit"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script>
+     new Vue({
+         el:"#app",
+         methods:{
+         },
+         data(){
+             return{
+                 user:{
+                     username:'',
+                     age:''
+                 },
+                 users:[],
+                 resp:'',
+             }
+         },
+         mounted(){
+             var userList = new Array();
+    userList.push({username:"张三",age:12});
+    userList.push({username:"李四",age:16});
+    axios({
+        method:"post",
+        url:"/spring_mvc_war_exploded/user/quick19",
+        data:userList,
+        contentType:"application/json;charset=utf-8"
+    }).then(function (resp){
+
+    });
+         }
+     })
+    /*var userList = new Array();
+    userList.push({username:"张三",age:12});
+    userList.push({username:"李四",age:16});
+    $.ajax({
+        method:"POST",
+        url:"/spring_mvc_war_exploded/user/quick19",
+        data:JSON.stringify(userList),
+        contentType:"application/json;charset=utf-8"
+    });*/
+
+</script>
+</body>
+</html>

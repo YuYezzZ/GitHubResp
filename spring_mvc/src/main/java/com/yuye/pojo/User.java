@@ -1,15 +1,15 @@
 package com.yuye.pojo;
 
 public class User {
-    private String name;
+    private String username;
     private int age;
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public int getAge() {
@@ -23,15 +23,15 @@ public class User {
     public User() {
     }
 
-    public User(String name, int age) {
-        this.name = name;
+    public User(String username, int age) {
+        this.username = username;
         this.age = age;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "username='" + username + '\'' +
                 ", age=" + age +
                 '}';
     }

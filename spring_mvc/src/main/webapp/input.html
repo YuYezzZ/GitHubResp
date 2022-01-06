@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/spring_mvc_war_exploded/js/vue.js"></script>
+    <script src="/spring_mvc_war_exploded/js/axios-0.18.0.js"></script>
+    <script src="/spring_mvc_war_exploded/js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="app">
+    <form action="/spring_mvc_war_exploded/user/quick26" method="post" enctype="multipart/form-data">
+        <input type="text" name="username">
+        <!--<input type="file" name="uploadFile" >-->
+        <input type="file" name="uploadFiles" >
+        <input type="file" name="uploadFiles" >
+        <input type="submit" value="提交">
+    </form>
+</div>
+<script>
+     new Vue({
+         el:"#app",
+         methods:{
+         },
+         data(){
+             return{
+                 user:{
+                     username:'',
+                     age:''
+                 },
+                 users:[],
+                 resp:'',
+             }
+         },
+         mounted(){
+         }
+     })
+
+
+</script>
+</body>
+</html>

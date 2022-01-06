@@ -6,5 +6,28 @@
 </head>
 <body>
 <h1>Hello World!</h1>
+<form  action="http://localhost:8080/mvc/user/quick17" method="get" >
+    <table>
+        <tr>
+            <td>账号：</td>
+            <td><input type="text" name="list[0].username" ></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" name="list[0].age" ></td>
+        </tr>
+        <tr>
+            <td>账号2：</td>
+            <td><input type="text" name="list[1].username" ></td>
+        </tr>
+        <tr>
+            <td>密码2：</td>
+            <td><input type="password" name="list[1].age" ></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="submit" ></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>
