@@ -51,4 +51,7 @@
         <!--每个文件最大上传大小-->
         <property name="maxUploadSizePerFile" value="40000"></property>
     </bean>
+    <bean class="org.springframework.web.servlet.handler.WebRequestHandlerInterceptorAdapter">
+        <property name=""
+    </bean>
 </beans>

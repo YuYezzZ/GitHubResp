@@ -189,4 +189,10 @@ public class UserController {
         }
 
     }
+    @RequestMapping("/quick11")
+    @ResponseBody
+    public User save12(){
+        User user = new User("zs", 12);
+        return user;
+    }
 }
