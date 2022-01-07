@@ -19,6 +19,26 @@ public class RoleDaoImpl implements RoleDao {
         return roleList;
     }
 
+    @Override
+    public void save(Role role) {
+        jdbcTemplate.update("insert into sys_role values(?,?,?)",null,role.getRoleName(),role.getRoleDesc());
+    }
+
+
+
+    @Override
+    public List<Role> findRoleByUserId(Long userId) {
+       /* List<Long> roleIds = jdbcTemplate.query("select roleId from sys_user_role where userId=?", new BeanPropertyRowMapper<Long>(Long.class), userId);
+        List<Role> roleList = new ArrayList<>();
+        for (Long roleId : roleIds) {
+            Role role = jdbcTemplate.queryForObject("select * from sys_role where id = ?", Role.class, roleId);
+            roleList.add(role);
+        }*/
+        List<Role> roleList = jdbcTemplate.query("select * from sys_user_role ur,sys_role r where ur.roleId=r.id and ur.userId=?", new BeanPropertyRowMapper<Role>(Role.class), userId);
+        return roleList;
+    }
+
+
     public JdbcTemplate getJdbcTemplate() {
         return jdbcTemplate;
     }

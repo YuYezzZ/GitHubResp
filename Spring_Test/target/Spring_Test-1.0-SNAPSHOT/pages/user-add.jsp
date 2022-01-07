@@ -91,7 +91,7 @@
 			</section>
 			<!-- 内容头部 /-->
 
-			<form action="${pageContext.request.contextPath}/user/save.do"
+			<form action="${pageContext.request.contextPath}/user/save"
 				method="post">
 				<!-- 正文区域 -->
 				<section class="content"> <!--产品信息-->
@@ -122,12 +122,12 @@
 						</div>
 						<div class="col-md-2 title">用户角色</div>
 						<div class="col-md-10 data">
-							<input class="" type="checkbox" name="roleId" value="1">院长
-							<input type="checkbox" name="roleId" value="2">课程研究员
-							<input type="checkbox" name="roleId" value="3">讲师
-							<input type="checkbox" name="roleId" value="4">助教
-							<input type="checkbox" name="roleId" value="5">就业指导
-							<input type="checkbox" name="roleId" value="6">班主任
+							<input class="" type="checkbox" name="roleIds" value="1">院长
+							<input type="checkbox" name="roleIds" value="7">秘书
+							<input type="checkbox" name="roleIds" value="3">讲师
+							<input type="checkbox" name="roleIds" value="4">助教
+							<input type="checkbox" name="roleIds" value="5">就业指导
+							<input type="checkbox" name="roleIds" value="10">班主任
 						</div>
 
 					</div>

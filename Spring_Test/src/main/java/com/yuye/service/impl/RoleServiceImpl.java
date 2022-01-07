@@ -18,6 +18,11 @@ public class RoleServiceImpl implements RoleService {
         return roleList;
     }
 
+    @Override
+    public void saveRole(Role role) {
+        roleDao.save(role);
+    }
+
     public RoleServiceImpl(RoleDao roleDao) {
         this.roleDao = roleDao;
     }
