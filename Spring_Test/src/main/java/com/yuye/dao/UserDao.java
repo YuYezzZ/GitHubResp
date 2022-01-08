@@ -10,4 +10,8 @@ public interface UserDao {
     Long saveUser(User user);
 
     void saveUserRole(Long userId,Long[] roleIds);
+
+    void deleteUser(Long userId);
+
+    User checkUser(String username,String password);
 }

@@ -9,4 +9,8 @@ public interface UserService {
     List<User> userAll();
 
     void saveUser(User user,Long[] roleIds);
+
+    void deleteUser(Long userId);
+
+    User checkUser(String username,String password);
 }

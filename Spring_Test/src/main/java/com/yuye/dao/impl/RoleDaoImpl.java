@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.List;
-
 @Repository("roleDao")
 public class RoleDaoImpl implements RoleDao {
     @Resource(name="jdbcTemplate")

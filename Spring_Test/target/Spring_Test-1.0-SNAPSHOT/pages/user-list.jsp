@@ -109,7 +109,7 @@
                             <div class="form-group form-inline">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default" title="新建"
-                                            onclick="location.href='${pageContext.request.contextPath}/pages/user-add.jsp'">
+                                            onclick="location.href='${pageContext.request.contextPath}/role/userRole'">
                                         <i class="fa fa-file-o"></i> 新建
                                     </button>
 
@@ -158,7 +158,7 @@
                                         </c:forEach>
                                     </td>
                                     <td class="text-center">
-                                        <a href="javascript:void(0);" class="btn bg-olive btn-xs">删除</a>
+                                        <a href="#" onclick="deleteUser('${user.id}')" class="btn bg-olive btn-xs">删除</a>
                                     </td>
                                 </tr>
                             </c:forEach>
@@ -195,7 +195,14 @@
     <!-- 底部导航 /-->
 
 </div>
-
+<%--删除时间--%>
+<script>
+     function deleteUser(id){
+         if(confirm("你确认要删除吗？") ){
+             location.href="${pageContext.request.contextPath}/user/delete/"+id;
+         }
+    }
+</script>
 <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
 <script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
 <script>

@@ -5,6 +5,7 @@ import com.yuye.dao.UserDao;
 import com.yuye.pojo.Role;
 import com.yuye.pojo.User;
 import com.yuye.service.UserService;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -31,5 +32,20 @@ public class UserServiceImpl implements UserService {
     public void saveUser(User user,Long[] roleIds) {
         Long userId = userDao.saveUser(user);
         userDao.saveUserRole(userId,roleIds);
+    }
+
+    @Override
+    public void deleteUser(Long userId) {
+        userDao.deleteUser(userId);
+    }
+
+    @Override
+    public User checkUser(String username,String password) {
+        try {
+            User user = userDao.checkUser(username, password);
+            return user;
+        }catch (EmptyResultDataAccessException e){
+            return null;
+        }
     }
 }

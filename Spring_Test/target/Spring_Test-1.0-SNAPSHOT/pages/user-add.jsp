@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -122,12 +123,9 @@
 						</div>
 						<div class="col-md-2 title">用户角色</div>
 						<div class="col-md-10 data">
-							<input class="" type="checkbox" name="roleIds" value="1">院长
-							<input type="checkbox" name="roleIds" value="7">秘书
-							<input type="checkbox" name="roleIds" value="3">讲师
-							<input type="checkbox" name="roleIds" value="4">助教
-							<input type="checkbox" name="roleIds" value="5">就业指导
-							<input type="checkbox" name="roleIds" value="10">班主任
+							<c:forEach items="${roleList}" var="role">
+								<input class="" type="checkbox" name="roleIds" value="${role.id}">${role.roleName}
+							</c:forEach>
 						</div>
 
 					</div>

@@ -22,4 +22,24 @@
     <mvc:default-servlet-handler/>
     <!--扫描包-->
     <context:component-scan base-package="com.yuye.controller"/>
+    <!--配置springmvc拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--配置对那些资源执行拦截操作-->
+            <mvc:mapping path="/**"/>
+            <!--配置对那些资源不拦截-->
+            <mvc:exclude-mapping path="/user/login" />
+            <mvc:exclude-mapping path="/show" />
+            <bean  class="com.yuye.interceptor.LoginInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!--配置spring默认exception-->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="defaultErrorView" value="error"></property>
+        <property name="exceptionMappings">
+            <map>
+                <entry key="java.lang.ClassCastException" value="error"></entry>
+            </map>
+        </property>
+    </bean>
 </beans>

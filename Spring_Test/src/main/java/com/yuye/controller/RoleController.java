@@ -29,4 +29,13 @@ public class RoleController {
         roleService.saveRole(role);
         return "redirect:/role/list";
     }
+    @RequestMapping("/userRole")
+    public ModelAndView userRole() throws IOException {
+        ModelAndView mav = new ModelAndView();
+        List<Role> roleList = roleService.roleAll();
+        System.out.println(roleList);
+        mav.addObject("roleList",roleList);
+        mav.setViewName("user-add");
+        return mav;
+    }
 }
