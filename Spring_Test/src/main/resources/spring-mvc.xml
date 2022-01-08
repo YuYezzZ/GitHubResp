@@ -34,12 +34,15 @@
         </mvc:interceptor>
     </mvc:interceptors>
     <!--配置spring默认exception-->
-    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+    <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
         <property name="defaultErrorView" value="error"></property>
         <property name="exceptionMappings">
             <map>
-                <entry key="java.lang.ClassCastException" value="error"></entry>
+                <entry key="java.lang.ClassCastException" value="error1"></entry>
+                <entry key="com.yuye.exception.MyException" value="error2"></entry>
             </map>
         </property>
-    </bean>
+    </bean>-->
+    <!--自定义异常-->
+    <bean class="com.yuye.exception.MyExceptionResolver" />
 </beans>

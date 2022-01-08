@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 @Repository("exceptionDao")
 public class ExceptionDao {
     public void show1() throws Exception{
-        System.out.println("抛出类转换异常");
         Object str = "zhangsan" ;
         Integer num = (Integer) str;
     }
@@ -21,8 +20,8 @@ public class ExceptionDao {
         System.out.println("抛出类转换异常");
 
     }
-    public void show5(){
+    public void show5()throws MyException{
         System.out.println("抛出类转换异常");
-
+        throw new MyException();
     }
 }
