@@ -3,10 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
     <properties resource="jdbc.properties" ></properties>
+
     <typeAliases>
         <package name="com.yuye.pojo"/>
     </typeAliases>
+    <!--mybatisplus分页拦截器-->
+    <plugins>
+        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"></plugin>
+    </plugins>
     <environments default="mybatisplus">
         <environment id="mybatisplus">
             <transactionManager type="JDBC"></transactionManager>
@@ -18,6 +24,7 @@
             </dataSource>
         </environment>
     </environments>
+
     <mappers>
         <package name="com.yuye.mapper"/>
     </mappers>

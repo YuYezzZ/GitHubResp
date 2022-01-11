@@ -12,4 +12,8 @@
     <select id="findAll" resultMap="userResultMap" >
         select * from tb_user
     </select>
+
+    <select id="selectPageVo" resultMap="userResultMap">
+        select * from tb_user
+    </select>
 </mapper>
