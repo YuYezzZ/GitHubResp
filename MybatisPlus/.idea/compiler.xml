@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mp_simple" />
+        <module name="mp_spring" />
       </profile>
     </annotationProcessing>
   </component>

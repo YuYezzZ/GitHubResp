@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+">
+    <context:property-placeholder location="classpath:jdbc.properties" />
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"></property>
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <!--配置分页拦截器-->
+        <property name="plugins">
+            <array>
+                <bean class="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor">
+                </bean>
+            </array>
+        </property>
+        <!--配置全局idType属性-->
+        <property name="globalConfig">
+            <bean class="com.baomidou.mybatisplus.core.config.GlobalConfig">
+                <property name="dbConfig">
+                    <bean class="com.baomidou.mybatisplus.core.config.GlobalConfig$DbConfig">
+                        <property name="idType" value="AUTO"></property>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.yuye.mapper"></property>
+    </bean>
+    <context:annotation-config></context:annotation-config>
+</beans>

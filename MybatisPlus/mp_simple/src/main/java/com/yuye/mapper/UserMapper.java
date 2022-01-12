@@ -9,5 +9,4 @@ import java.util.List;
 
 public interface UserMapper extends BaseMapper<User> {
     List<User> findAll();
-    IPage<User> selectPageVo(Page<?> page, Integer state);
 }

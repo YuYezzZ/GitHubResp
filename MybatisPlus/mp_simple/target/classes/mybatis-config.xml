@@ -9,7 +9,7 @@
     <typeAliases>
         <package name="com.yuye.pojo"/>
     </typeAliases>
-    <!--mybatisplus分页拦截器-->
+    <!--mybatisplus分页拦截器 早期版本适用-->
     <plugins>
         <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"></plugin>
     </plugins>
