@@ -30,6 +30,10 @@
                         <property name="idType" value="AUTO"></property>
                     </bean>
                 </property>
+                <property name="sqlInjector">
+                    <bean class="com.yuye.injector.MyInjector">
+                    </bean>
+                </property>
             </bean>
         </property>
     </bean>

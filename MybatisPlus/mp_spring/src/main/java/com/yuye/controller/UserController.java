@@ -11,12 +11,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.HashMap;
 import java.util.List;
+
 @ContextConfiguration(locations="classpath:applicationContext.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
 public class UserController {
     @Autowired
     private UserMapper userMapper;
+    @Test
+    //selectList
+    public void findAll(){
+        List<User> users = this.userMapper.findAll();
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
     @Test
     //selectList
     public void selectList(){
@@ -49,5 +59,44 @@ public class UserController {
         int insert = userMapper.insert(user);
         System.out.println(insert);
         System.out.println(user.getId());
+    }
+    @Test
+    //selectPage
+    public void selectTest1(){
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+//        userQueryWrapper.like("password","1");
+//        userQueryWrapper.likeLeft("user_name","m");
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("password","123456");
+        map.put("user_name","tom");
+        userQueryWrapper.allEq(map);
+        List<User> users = userMapper.selectList(userQueryWrapper);
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+    @Test
+    public void selectTest2(){
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+
+        userQueryWrapper.ge("age",15);//>=
+        List<User> users = userMapper.selectList(userQueryWrapper);
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+    @Test
+    public void selectTest3(){
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+
+        //userQueryWrapper.le("age",15);//<=
+//        userQueryWrapper.select("user_name").le("age",15);//<=  select表示查询内容
+//        userQueryWrapper.between("age",14,30);
+//        userQueryWrapper.orderByDesc("age");
+        userQueryWrapper.eq("age",20).or().eq("user_name","tom");
+        List<User> users = userMapper.selectList(userQueryWrapper);
+        for (User user : users) {
+            System.out.println(user);
+        }
     }
 }
