@@ -52,6 +52,6 @@
         <property name="maxUploadSizePerFile" value="40000"></property>
     </bean>
     <bean class="org.springframework.web.servlet.handler.WebRequestHandlerInterceptorAdapter">
-        <property name=""
+        <constructor-arg value="com.alibaba.fastjson"
     </bean>
 </beans>

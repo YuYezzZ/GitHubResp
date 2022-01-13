@@ -13,21 +13,49 @@
         <property name="username" value="${jdbc.username}"></property>
         <property name="password" value="${jdbc.password}"></property>
     </bean>
-    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">
+    <bean class="com.yuye.interceptor.MyInterceptor"></bean>
+
+    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean" >
         <property name="dataSource" ref="dataSource"></property>
-        <!--配置分页拦截器-->
-        <property name="plugins">
+        <property name="plugins" >
             <array>
-                <bean class="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor">
+                <!--配置分页拦截器-->
+                <bean class="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"></bean>
+                <!--配置乐观锁-->
+                <bean class="com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor"></bean>
+                <!--配置性能分析-->
+                <bean class="com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor">
+                    <!--格式化sql语句 true表示格式化-->
+                    <property name="format" value="true"></property>
+                    <!--配置执行sql语句的最大时间单位是ms-->
+                    <property name="maxTime" value="100"></property>
+                </bean>
+                <!--配置分析插件-->
+                <bean class="com.baomidou.mybatisplus.extension.plugins.SqlExplainInterceptor">
+                    <property name="sqlParserList">
+                        <list>
+                            <!--配置阻断全表操作分析-->
+                            <bean class="com.baomidou.mybatisplus.extension.parsers.BlockAttackSqlParser">
+                            </bean>
+                        </list>
+                    </property>
                 </bean>
             </array>
         </property>
+        <!--配置枚举类型包扫描路径-->
+        <property name="typeEnumsPackage" value="com.yuye.enums"></property>
         <!--配置全局idType属性-->
         <property name="globalConfig">
             <bean class="com.baomidou.mybatisplus.core.config.GlobalConfig">
                 <property name="dbConfig">
                     <bean class="com.baomidou.mybatisplus.core.config.GlobalConfig$DbConfig">
                         <property name="idType" value="AUTO"></property>
+                        <!--去掉前缀，可以自动匹配类-->
+                        <property name="tablePrefix" value="tb_"></property>
+                        <!--逻辑删除 删除值为1-->
+                        <property name="logicDeleteValue" value="1"></property>
+                        <!--逻辑删除 未删除值为-1-->
+                        <property name="logicNotDeleteValue" value="-1"></property>
                     </bean>
                 </property>
                 <property name="sqlInjector">

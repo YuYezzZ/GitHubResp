@@ -3,6 +3,7 @@ package com.yuye.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.yuye.enums.Gender;
 import com.yuye.mapper.UserMapper;
 import com.yuye.pojo.User;
 import org.junit.Test;
@@ -19,6 +20,71 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserMapper userMapper;
+    @Test
+    //自定义插件
+    public void interceptor(){
+        User user1 = new User();
+        user1.setName("汤姆");
+        user1.setVersion(3);
+        user1.setId(11L);
+        user1.updateById();
+        /*List<User> users = user1.selectList(null);
+        for (User user : users) {
+            System.out.println(user);
+        }*/
+    }
+    @Test
+    //枚举类型
+    public void select(){
+        User user1 = new User();
+        user1.setSex(Gender.WOMAN);
+        user1.setVersion(2);
+        user1.setId(12L);
+        user1.updateById();
+        List<User> users = user1.selectList(null);
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+    @Test
+    //逻辑删除
+    public void logicDelete(){
+        User user = new User();
+        user.setId(11L);
+        user.setVersion(2);
+        boolean b = user.deleteById();
+        System.out.println(b);
+        List<User> users = userMapper.selectList(null);
+        for (User user1 : users) {
+            System.out.println(user1);
+        }
+    }
+    @Test
+    //阻断全表更新
+    public void updateAll(){
+        User user = new User();
+        user.setAge(20);
+        user.setVersion(1);
+        user.update(null);
+    }
+    @Test
+    //开启乐观锁
+    public void lock(){
+        User user = new User();
+        user.setId(4L);
+        user.setAge(23);
+        user.setVersion(2);
+        boolean b = user.updateById();
+        System.out.println(b);
+    }
+    @Test
+    //开启ActiveRecord
+    public void selectById(){
+        User user = new User();
+        user.setId(4L);
+        User user1 = user.selectById();
+        System.out.println(user1);
+    }
     @Test
     //selectList
     public void findAll(){
