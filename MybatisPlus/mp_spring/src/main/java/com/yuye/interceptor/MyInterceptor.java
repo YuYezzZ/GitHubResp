@@ -16,6 +16,7 @@ import java.util.Properties;
 public class MyInterceptor implements Interceptor {
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
+        System.out.println("hello===============================================");
         return invocation.proceed();
     }
 

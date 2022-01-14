@@ -13,11 +13,13 @@
         <property name="username" value="${jdbc.username}"></property>
         <property name="password" value="${jdbc.password}"></property>
     </bean>
-    <bean class="com.yuye.interceptor.MyInterceptor"></bean>
+<!--    <bean class="com.yuye.interceptor.MyInterceptor"></bean>-->
+
     <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean" >
         <property name="dataSource" ref="dataSource"></property>
-        <property name="plugins">
+        <property name="plugins" >
             <array>
+                <bean class="com.yuye.interceptor.MyInterceptor"></bean>
                 <!--配置分页拦截器-->
                 <bean class="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"></bean>
                 <!--配置乐观锁-->

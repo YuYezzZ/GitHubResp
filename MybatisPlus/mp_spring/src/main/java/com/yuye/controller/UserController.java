@@ -24,8 +24,8 @@ public class UserController {
     //自定义插件
     public void interceptor(){
         User user1 = new User();
-        user1.setName("汤姆");
-        user1.setVersion(3);
+        user1.setName("汤姆1");
+        user1.setVersion(6);
         user1.setId(11L);
         user1.updateById();
         /*List<User> users = user1.selectList(null);
