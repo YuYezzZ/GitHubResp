@@ -1,0 +1,44 @@
+server:
+  port: 80
+#普通数据类型
+#int
+age: 15
+#string
+name1: zhangsan
+name2: "lisi"
+#boolean
+flag: false
+#数组
+strs1:
+  - hello
+  - hi
+  - fine
+strs2: [hello,hi,fine]
+#对象
+user1:
+  name: wangwu
+  age: 20
+user2.name: zhaoliu
+user2.age: 21
+#集合
+users1:
+  - name: tom
+    age: 22
+  - name: tim
+    ge: 22
+
+users2: [{name: lucy,age: 30},{name: jack,age: 25}]
+users3:
+  -
+    name: bob
+    age: 22
+  -
+    name: tony
+    ge: 23
+#变量引用
+baseDir: D:\JavaFile\IDEA_workspace
+userDir: D:\JavaFile\IDEA_workspace\SpringBoot
+userDir2: ${baseDir}\SpringBoot
+#如果想要转义符生效就用双引号将属性值包裹住
+userDir3: "${baseDir}\\SpringBoot\t1\t2"
+userDir4: "${baseDir}\\SpringBoot\\t1\t2"

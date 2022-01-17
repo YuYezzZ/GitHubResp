@@ -11,6 +11,11 @@
         <option value="$PROJECT_DIR$/spring_boot_01_03_quickstart/pom.xml" />
         <option value="$PROJECT_DIR$/spring_boot_01_04_quickstart/pom.xml" />
         <option value="$PROJECT_DIR$/spring_boot_02_01_propertis/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_boot_03_yaml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_boot_04_test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_boot_05_mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_boot_06_mybatisplus/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_boot_07_druid/pom.xml" />
       </list>
     </option>
   </component>

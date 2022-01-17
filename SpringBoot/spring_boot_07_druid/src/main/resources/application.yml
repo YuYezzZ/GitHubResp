@@ -1,0 +1,16 @@
+#原始方式：
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/springboot
+#    username: root
+#    password: root
+#    type: com.alibaba.druid.pool.DruidDataSource
+#集成方式
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/springboot?useSSL=false&useServerPrepStmts=true
+      username: root
+      password: root

@@ -8,6 +8,11 @@
       <module fileurl="file://$PROJECT_DIR$/spring_boot_01_03_quickstart/spring_boot_01_03_quickstart.iml" filepath="$PROJECT_DIR$/spring_boot_01_03_quickstart/spring_boot_01_03_quickstart.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_boot_01_04_quickstart/spring_boot_01_04_quickstart.iml" filepath="$PROJECT_DIR$/spring_boot_01_04_quickstart/spring_boot_01_04_quickstart.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_boot_02_01_propertis/spring_boot_02_01_propertis.iml" filepath="$PROJECT_DIR$/spring_boot_02_01_propertis/spring_boot_02_01_propertis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_boot_03_yaml/spring_boot_03_yaml.iml" filepath="$PROJECT_DIR$/spring_boot_03_yaml/spring_boot_03_yaml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_boot_04_test/spring_boot_04_test.iml" filepath="$PROJECT_DIR$/spring_boot_04_test/spring_boot_04_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_boot_05_mybatis/spring_boot_05_mybatis.iml" filepath="$PROJECT_DIR$/spring_boot_05_mybatis/spring_boot_05_mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_boot_06_mybatisplus/spring_boot_06_mybatisplus.iml" filepath="$PROJECT_DIR$/spring_boot_06_mybatisplus/spring_boot_06_mybatisplus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_boot_07_druid/spring_boot_07_druid.iml" filepath="$PROJECT_DIR$/spring_boot_07_druid/spring_boot_07_druid.iml" />
     </modules>
   </component>
 </project>
