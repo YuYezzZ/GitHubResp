@@ -9,8 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.List;
-
 @SpringBootTest
 class SpringBoot08SsmpApplicationTests {
     @Autowired
@@ -46,9 +44,9 @@ class SpringBoot08SsmpApplicationTests {
     }
     @Test
     void service(){
-        List<Book> books = bookService.selectList();
+        /*List<Book> books = bookService.selectList();
         System.out.println(books);
         Book book = bookService.selectById(3);
-        System.out.println(book);
+        System.out.println(book);*/
     }
 }
