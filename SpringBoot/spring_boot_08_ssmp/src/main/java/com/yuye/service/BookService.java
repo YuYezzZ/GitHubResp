@@ -1,12 +1,12 @@
 package com.yuye.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yuye.pojo.Book;
 
-import java.util.List;
-
 public interface BookService extends IService<Book> {
-    List<Book> getByCondition(Book book);
+
+    IPage<Book> getPage(int pageCurrent, int pageSize, Book book);
 
 
     /*Boolean save(Book book);
