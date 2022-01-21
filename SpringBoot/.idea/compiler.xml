@@ -7,17 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring_boot_11_log" />
+        <module name="spring_boot_06_mybatisplus" />
+        <module name="spring_boot_08_ssmp" />
+        <module name="spring_boot_09_config" />
+        <module name="spring_boot_01_03_quickstart" />
+        <module name="spring_boot_10_mul" />
+        <module name="spring_boot_07_druid" />
         <module name="spring_boot_01_01_quickstart" />
         <module name="spring_boot_05_mybatis" />
-        <module name="spring_boot_06_mybatisplus" />
         <module name="spring_boot_04_test" />
-        <module name="spring_boot_08_ssmp" />
         <module name="spring_boot_01_04_quickstart" />
-        <module name="spring_boot_01_03_quickstart" />
         <module name="spring_boot_03_yaml" />
         <module name="spring_boot_02_01_propertis" />
         <module name="spring_boot_01_02_quickstart" />
-        <module name="spring_boot_07_druid" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +35,9 @@
       <module name="spring_boot_06_mybatisplus" target="1.8" />
       <module name="spring_boot_07_druid" target="1.8" />
       <module name="spring_boot_08_ssmp" target="1.8" />
+      <module name="spring_boot_09_config" target="1.8" />
+      <module name="spring_boot_10_mul" target="1.8" />
+      <module name="spring_boot_11_log" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -46,6 +52,9 @@
       <module name="spring_boot_06_mybatisplus" options="-parameters" />
       <module name="spring_boot_07_druid" options="-parameters" />
       <module name="spring_boot_08_ssmp" options="-parameters" />
+      <module name="spring_boot_09_config" options="-parameters" />
+      <module name="spring_boot_10_mul" options="-parameters" />
+      <module name="spring_boot_11_log" options="-parameters" />
     </option>
   </component>
 </project>

@@ -14,6 +14,9 @@
       <module fileurl="file://$PROJECT_DIR$/spring_boot_06_mybatisplus/spring_boot_06_mybatisplus.iml" filepath="$PROJECT_DIR$/spring_boot_06_mybatisplus/spring_boot_06_mybatisplus.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_boot_07_druid/spring_boot_07_druid.iml" filepath="$PROJECT_DIR$/spring_boot_07_druid/spring_boot_07_druid.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_boot_08_ssmp/spring_boot_08_ssmp.iml" filepath="$PROJECT_DIR$/spring_boot_08_ssmp/spring_boot_08_ssmp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_boot_09_config/spring_boot_09_config.iml" filepath="$PROJECT_DIR$/spring_boot_09_config/spring_boot_09_config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_boot_10_mul/spring_boot_10_mul.iml" filepath="$PROJECT_DIR$/spring_boot_10_mul/spring_boot_10_mul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_boot_11_log/spring_boot_11_log.iml" filepath="$PROJECT_DIR$/spring_boot_11_log/spring_boot_11_log.iml" />
     </modules>
   </component>
 </project>
