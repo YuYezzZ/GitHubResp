@@ -1,0 +1,13 @@
+#  服务端口
+server:
+  port: 10086
+#  eureka服务器名称
+spring:
+  application:
+    name: eurekaserver
+#    注册eureka
+eureka:
+  client:
+     service-url:
+#       defaultZone为eureka服务器地址，可以与多个eureka组成集群
+        defaultZone: http://127.0.0.1:10086/eureka/

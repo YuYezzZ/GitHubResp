@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: orderservice
+  profiles:
+    active: dev  #配置环境
+  cloud:
+    nacos:
+      server-addr: localhost:8848 #配置nacos服务器集群地址
+      discovery:
+        cluster-name: SH  #配置userservice所属集群
+        namespace: 90bf8800-d194-499a-96c5-d54540bf05bd #配置环境隔离
+        ephemeral: true #是否是临时实例
+      config:
+        file-extension: yaml #配置文件格式
+        namespace: 90bf8800-d194-499a-96c5-d54540bf05bd

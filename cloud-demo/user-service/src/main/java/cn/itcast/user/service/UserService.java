@@ -11,6 +11,7 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
+
     public User queryById(Long id) {
         return userMapper.findById(id);
     }
