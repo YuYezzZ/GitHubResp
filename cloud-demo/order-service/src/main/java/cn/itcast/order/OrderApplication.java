@@ -3,22 +3,21 @@ package cn.itcast.order;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @MapperScan("cn.itcast.order.mapper")
 @SpringBootApplication
+@EnableFeignClients(clients = cn.itcast.feign.clients.UserClient.class)
 public class OrderApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(OrderApplication.class, args);
     }
-    @Bean
+    /*@Bean
     @LoadBalanced
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
-    }
+    }*/
     /*@Bean
     public IRule getIRule(){
         return new RoundRobinRule();

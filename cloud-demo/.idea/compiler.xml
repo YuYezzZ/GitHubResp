@@ -10,12 +10,16 @@
         <module name="EurekaServer" />
         <module name="order-service" />
         <module name="user-service" />
+        <module name="FeignApi" />
+        <module name="MyGateWay" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="EurekaServer" options="-parameters" />
+      <module name="FeignApi" options="-parameters" />
+      <module name="MyGateWay" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>

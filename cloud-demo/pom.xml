@@ -10,6 +10,8 @@
     <modules>
         <module>user-service</module>
         <module>order-service</module>
+        <module>FeignApi</module>
+        <module>MyGateWay</module>
     </modules>
 
     <packaging>pom</packaging>
