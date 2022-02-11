@@ -17,19 +17,26 @@ import org.elasticsearch.action.update.UpdateRequest;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.lucene.search.function.CombineFunction;
 import org.elasticsearch.common.xcontent.XContentType;
+import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.functionscore.FieldValueFactorFunctionBuilder;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.util.CollectionUtils;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Auther: yuye
@@ -45,9 +52,10 @@ public class HotelDocumentTest {
     private RestHighLevelClient restHighLevelClient;
 
     @Test
-    void testinit(){
+    void testinit() {
         System.out.println(restHighLevelClient);
     }
+
     @Test
     void addHotelDocument() throws IOException {
         //根据id查询酒店数据
@@ -61,6 +69,7 @@ public class HotelDocumentTest {
         //3.发送请求
         restHighLevelClient.index(request, RequestOptions.DEFAULT);
     }
+
     @Test
     void getHotelDocument() throws IOException {
         //准备request
@@ -72,18 +81,20 @@ public class HotelDocumentTest {
         HotelDoc hotelDoc = JSON.parseObject(sourceAsString, HotelDoc.class);
         System.out.println(hotelDoc);
     }
+
     @Test
     void updateHotelDocument() throws IOException {
-        UpdateRequest request = new UpdateRequest("hotel","61083");
+        UpdateRequest request = new UpdateRequest("hotel", "61083");
         request.doc(
-                "price","952",
-                "starName","四钻"
+                "price", "952",
+                "starName", "四钻"
         );
         restHighLevelClient.update(request, RequestOptions.DEFAULT);
     }
+
     @Test
     void deleteHotelDocument() throws IOException {
-        DeleteRequest request = new DeleteRequest("hotel","61083");
+        DeleteRequest request = new DeleteRequest("hotel", "61083");
         restHighLevelClient.delete(request, RequestOptions.DEFAULT);
     }
 
@@ -97,11 +108,12 @@ public class HotelDocumentTest {
         for (Hotel hotel : hotelList) {
             HotelDoc hotelDoc = new HotelDoc(hotel);
             //2.准备请求的参数：DSL语句
-            request.add(new IndexRequest("hotel").id(hotelDoc.getId().toString()).source(JSON.toJSONString(hotelDoc),XContentType.JSON));
+            request.add(new IndexRequest("hotel").id(hotelDoc.getId().toString()).source(JSON.toJSONString(hotelDoc), XContentType.JSON));
         }
         //3.发送请求
         restHighLevelClient.bulk(request, RequestOptions.DEFAULT);
     }
+
     @Test
     void searchMathAllHotelDocument() throws IOException {
         SearchRequest request = new SearchRequest("hotel");
@@ -109,41 +121,44 @@ public class HotelDocumentTest {
         SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
         SearchHits hits = response.getHits();
         TotalHits totalHits = hits.getTotalHits();
-        System.out.println("总条数："+totalHits.value);
+        System.out.println("总条数：" + totalHits.value);
         SearchHit[] sourceHits = hits.getHits();
         for (SearchHit sourceHit : sourceHits) {
             String sourceAsString = sourceHit.getSourceAsString();
             System.out.println(sourceAsString);
         }
     }
+
     @Test
     void searchMathHotelDocument() throws IOException {
         SearchRequest request = new SearchRequest("hotel");
-        request.source().query(QueryBuilders.matchQuery("name","如家"));
+        request.source().query(QueryBuilders.matchQuery("name", "如家"));
         SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
         SearchHits hits = response.getHits();
         TotalHits totalHits = hits.getTotalHits();
-        System.out.println("总条数："+totalHits.value);
+        System.out.println("总条数：" + totalHits.value);
         SearchHit[] sourceHits = hits.getHits();
         for (SearchHit sourceHit : sourceHits) {
             String sourceAsString = sourceHit.getSourceAsString();
             System.out.println(sourceAsString);
         }
     }
+
     @Test
     void searchTermHotelDocument() throws IOException {
         SearchRequest request = new SearchRequest("hotel");
-        request.source().query(QueryBuilders.termQuery("brand","如家"));
+        request.source().query(QueryBuilders.termQuery("brand", "如家"));
         SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
         SearchHits hits = response.getHits();
         TotalHits totalHits = hits.getTotalHits();
-        System.out.println("总条数："+totalHits.value);
+        System.out.println("总条数：" + totalHits.value);
         SearchHit[] sourceHits = hits.getHits();
         for (SearchHit sourceHit : sourceHits) {
             String sourceAsString = sourceHit.getSourceAsString();
             System.out.println(sourceAsString);
         }
     }
+
     @Test
     void searchRangeHotelDocument() throws IOException {
         SearchRequest request = new SearchRequest("hotel");
@@ -151,36 +166,104 @@ public class HotelDocumentTest {
         SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
         SearchHits hits = response.getHits();
         TotalHits totalHits = hits.getTotalHits();
-        System.out.println("总条数："+totalHits.value);
+        System.out.println("总条数：" + totalHits.value);
         SearchHit[] sourceHits = hits.getHits();
         for (SearchHit sourceHit : sourceHits) {
             String sourceAsString = sourceHit.getSourceAsString();
             System.out.println(sourceAsString);
         }
     }
+
     @Test
     void searchGeoDistanceHotelDocument() throws IOException {
         SearchRequest request = new SearchRequest("hotel");
-        request.source().query(QueryBuilders.geoDistanceQuery("location").distance("50km").point(31,121));
+        request.source().query(QueryBuilders.geoDistanceQuery("location").distance("50km").point(31, 121));
         SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
         SearchHits hits = response.getHits();
         TotalHits totalHits = hits.getTotalHits();
-        System.out.println("总条数："+totalHits.value);
+        System.out.println("总条数：" + totalHits.value);
         SearchHit[] sourceHits = hits.getHits();
         for (SearchHit sourceHit : sourceHits) {
             String sourceAsString = sourceHit.getSourceAsString();
             System.out.println(sourceAsString);
         }
     }
+
+    @Test
+    void searchBoolHotelDocument() throws IOException {
+        SearchRequest request = new SearchRequest("hotel");
+
+        BoolQueryBuilder boolQuery = QueryBuilders.boolQuery();
+        boolQuery.must().add(QueryBuilders.matchQuery("all", "如家"));
+        boolQuery.filter().add(QueryBuilders.rangeQuery("price").lte(400));
+        boolQuery.filter().add(QueryBuilders.geoDistanceQuery("location").distance("10km").point(31.21, 121.5));
+        request.source().query(boolQuery);
+        SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
+        SearchHits hits = response.getHits();
+        TotalHits totalHits = hits.getTotalHits();
+        System.out.println("总条数：" + totalHits.value);
+        SearchHit[] sourceHits = hits.getHits();
+        for (SearchHit sourceHit : sourceHits) {
+            String sourceAsString = sourceHit.getSourceAsString();
+            System.out.println(sourceAsString);
+        }
+    }
+
+    @Test
+    void searchPageHotelDocument() throws IOException {
+        SearchRequest request = new SearchRequest("hotel");
+        request.source().query(QueryBuilders.matchQuery("name", "如家"));
+        request.source().from(1).size(5);
+        SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
+        SearchHits hits = response.getHits();
+        TotalHits totalHits = hits.getTotalHits();
+        System.out.println("总条数：" + totalHits.value);
+        SearchHit[] sourceHits = hits.getHits();
+        for (SearchHit sourceHit : sourceHits) {
+            String sourceAsString = sourceHit.getSourceAsString();
+            System.out.println(sourceAsString);
+        }
+    }
+
+    @Test
+    void searchHighlightHotelDocument() throws IOException {
+        SearchRequest request = new SearchRequest("hotel");
+        request.source().query(QueryBuilders.matchQuery("all", "如家"));
+        request.source().from(1).size(5);
+        request.source().highlighter(new HighlightBuilder().field("name").requireFieldMatch(false));
+        SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
+        SearchHits hits = response.getHits();
+        TotalHits totalHits = hits.getTotalHits();
+        System.out.println("总条数：" + totalHits.value);
+        SearchHit[] sourceHits = hits.getHits();
+
+        for (SearchHit sourceHit : sourceHits) {
+            Map<String, HighlightField> highlightFields = sourceHit.getHighlightFields();
+            String sourceAsString = sourceHit.getSourceAsString();
+            HotelDoc hotelDoc = JSON.parseObject(sourceAsString, HotelDoc.class);
+            if (!CollectionUtils.isEmpty(highlightFields)) {
+                HighlightField highlightField = highlightFields.get("name");
+                if(highlightField!=null) {
+                    String name = highlightField.getFragments()[0].toString();
+                    hotelDoc.setName(name);
+                }
+            }
+            System.out.println(hotelDoc);
+        }
+    }
+
     @Test
     void searchFunctionScoreHotelDocument() throws IOException {
         SearchRequest request = new SearchRequest("hotel");
-        FunctionScoreQueryBuilder functionQuery = QueryBuilders.functionScoreQuery(QueryBuilders.matchQuery("name","如家"));
+        FieldValueFactorFunctionBuilder fieldQuery = new FieldValueFactorFunctionBuilder("name");
+        fieldQuery.setWeight(10);
+        FunctionScoreQueryBuilder functionQuery = QueryBuilders.functionScoreQuery(QueryBuilders.matchQuery("all", "外滩"), fieldQuery);
+        functionQuery.boostMode(CombineFunction.SUM);
         request.source().query(functionQuery);
         SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
         SearchHits hits = response.getHits();
         TotalHits totalHits = hits.getTotalHits();
-        System.out.println("总条数："+totalHits.value);
+        System.out.println("总条数：" + totalHits.value);
         SearchHit[] sourceHits = hits.getHits();
         for (SearchHit sourceHit : sourceHits) {
             String sourceAsString = sourceHit.getSourceAsString();
@@ -189,12 +272,13 @@ public class HotelDocumentTest {
     }
 
     @BeforeEach
-    //index测试
-    void setUp(){
+        //index测试
+    void setUp() {
         this.restHighLevelClient = new RestHighLevelClient(RestClient.builder(
                 HttpHost.create("http://192.168.127.129:9200")
         ));
     }
+
     @AfterEach
     void tearDown() throws IOException {
         this.restHighLevelClient.close();
