@@ -27,6 +27,10 @@ import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
+import org.elasticsearch.search.suggest.Suggest;
+import org.elasticsearch.search.suggest.SuggestBuilder;
+import org.elasticsearch.search.suggest.SuggestBuilders;
+import org.elasticsearch.search.suggest.completion.CompletionSuggestion;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -35,6 +39,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.CollectionUtils;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -97,7 +102,7 @@ public class HotelDocumentTest {
         DeleteRequest request = new DeleteRequest("hotel", "61083");
         restHighLevelClient.delete(request, RequestOptions.DEFAULT);
     }
-
+    //将数据库中的数据导入到es中
     @Test
     void addBulkHotelDocument() throws IOException {
         //1.创建request对象
@@ -250,6 +255,30 @@ public class HotelDocumentTest {
             }
             System.out.println(hotelDoc);
         }
+    }
+
+    @Test
+    void searchSuggestionDocument() throws IOException {
+        //1.准备request
+        SearchRequest request = new SearchRequest("hotel");
+        //2.准备dsl语句
+        request.source().suggest(new SuggestBuilder().addSuggestion("suggestions" ,SuggestBuilders.completionSuggestion("suggestion")
+                .prefix("h")
+                .skipDuplicates(true)
+                .size(20)
+        ));
+        //3.发送请求
+        SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
+        //4.解析数据
+        Suggest suggest = response.getSuggest();
+        CompletionSuggestion suggestions = suggest.getSuggestion("suggestions");
+        List<CompletionSuggestion.Entry.Option> options = suggestions.getOptions();
+        ArrayList<String> keyList = new ArrayList<>();
+        for (CompletionSuggestion.Entry.Option option : options) {
+            String key = option.getText().toString();
+            keyList.add(key);
+        }
+        System.out.println(keyList);
     }
 
     @Test

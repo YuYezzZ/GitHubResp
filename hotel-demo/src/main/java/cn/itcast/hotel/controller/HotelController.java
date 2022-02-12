@@ -4,12 +4,11 @@ import cn.itcast.hotel.pojo.PageResult;
 import cn.itcast.hotel.pojo.RequestParams;
 import cn.itcast.hotel.service.IHotelService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Auther: yuye
@@ -26,5 +25,13 @@ public class HotelController {
     @PostMapping("/list")
     public PageResult search(@RequestBody RequestParams requestParams) throws IOException {
         return  hotelService.search(requestParams);
+    }
+    @PostMapping("/filters")
+    public Map<String, List<String>> searchAgg(@RequestBody RequestParams requestParams) throws IOException {
+        return hotelService.searchAgg(requestParams);
+    }
+    @GetMapping("/suggestion")
+    public List<String> suggestion(@RequestParam("key") String prefix){
+        return hotelService.suggestion(prefix);
     }
 }

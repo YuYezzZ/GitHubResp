@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="776da806-bfda-4bfe-ad1a-c949068f6f78" name="Changes" comment="elasticsearch入门">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/controller/HotelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/pojo/PageResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/pojo/RequestParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/controller/HotelController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/pojo/PageResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/pojo/RequestParams.class" afterDir="false" />
+    <list default="true" id="776da806-bfda-4bfe-ad1a-c949068f6f78" name="Changes" comment="elasticsearch实现小项目">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/HotelDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/HotelDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/constants/RabbitMqEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/constants/RabbitMqEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/pojo/HotelDoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/pojo/HotelDoc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/service/IHotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/service/IHotelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/service/impl/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/service/impl/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/itcast/hotel/HotelDocumentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/itcast/hotel/HotelDocumentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/HotelDemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/HotelDemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/controller/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/controller/HotelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/pojo/HotelDoc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/pojo/HotelDoc.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/service/IHotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/service/IHotelService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/service/impl/HotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/service/impl/HotelService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/cn/itcast/hotel/HotelDocumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/itcast/hotel/HotelDocumentTest.class" afterDir="false" />
@@ -29,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -76,7 +77,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hotel-admin" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
@@ -85,6 +86,22 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.HotelDemoApplication">
+    <configuration name="HotelDocumentTest.addBulkHotelDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hotel-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.itcast.hotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelDocumentTest" />
+      <option name="METHOD_NAME" value="addBulkHotelDocument" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HotelDocumentTest.searchBoolHotelDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hotel-demo" />
       <extension name="coverage">
@@ -96,38 +113,6 @@
       <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
       <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelDocumentTest" />
       <option name="METHOD_NAME" value="searchBoolHotelDocument" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HotelDocumentTest.searchFunctionScoreHotelDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hotel-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.itcast.hotel.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelDocumentTest" />
-      <option name="METHOD_NAME" value="searchFunctionScoreHotelDocument" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HotelDocumentTest.searchGeoDistanceHotelDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hotel-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.itcast.hotel.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelDocumentTest" />
-      <option name="METHOD_NAME" value="searchGeoDistanceHotelDocument" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,6 +150,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HotelDocumentTest.searchSuggestionDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hotel-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.itcast.hotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelDocumentTest" />
+      <option name="METHOD_NAME" value="searchSuggestionDocument" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HotelDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hotel-demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.itcast.hotel.HotelDemoApplication" />
@@ -174,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HotelDocumentTest.searchSuggestionDocument" />
+        <item itemvalue="JUnit.HotelDocumentTest.addBulkHotelDocument" />
         <item itemvalue="JUnit.HotelDocumentTest.searchHighlightHotelDocument" />
         <item itemvalue="JUnit.HotelDocumentTest.searchPageHotelDocument" />
         <item itemvalue="JUnit.HotelDocumentTest.searchBoolHotelDocument" />
-        <item itemvalue="JUnit.HotelDocumentTest.searchFunctionScoreHotelDocument" />
-        <item itemvalue="JUnit.HotelDocumentTest.searchGeoDistanceHotelDocument" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +194,8 @@
       <workItem from="1644463885734" duration="125000" />
       <workItem from="1644464026624" duration="197000" />
       <workItem from="1644464238639" duration="11341000" />
-      <workItem from="1644539884261" duration="14904000" />
+      <workItem from="1644539884261" duration="14976000" />
+      <workItem from="1644624853111" duration="15342000" />
     </task>
     <task id="LOCAL-00001" summary="elasticsearch入门">
       <created>1644496033399</created>
@@ -202,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644496033399</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="elasticsearch实现小项目">
+      <created>1644582329803</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644582329803</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +230,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="elasticsearch入门" />
-    <option name="LAST_COMMIT_MESSAGE" value="elasticsearch入门" />
+    <MESSAGE value="elasticsearch实现小项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="elasticsearch实现小项目" />
   </component>
 </project>
