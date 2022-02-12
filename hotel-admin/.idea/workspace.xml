@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c1c44b33-6e1f-4480-9c2b-8de27b478e00" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/constants/RabbitMqEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/constants/RabbitMqEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/pojo/HotelDoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/pojo/HotelDoc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/service/IHotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/service/IHotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/service/impl/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/service/impl/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/src/test/java/cn/itcast/hotel/HotelDocumentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/src/test/java/cn/itcast/hotel/HotelDocumentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/target/classes/cn/itcast/hotel/controller/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/target/classes/cn/itcast/hotel/controller/HotelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/target/classes/cn/itcast/hotel/pojo/HotelDoc.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/target/classes/cn/itcast/hotel/pojo/HotelDoc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/target/classes/cn/itcast/hotel/service/IHotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/target/classes/cn/itcast/hotel/service/IHotelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/target/classes/cn/itcast/hotel/service/impl/HotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/target/classes/cn/itcast/hotel/service/impl/HotelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/target/test-classes/cn/itcast/hotel/HotelDocumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/target/test-classes/cn/itcast/hotel/HotelDocumentTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\Program Files\apache-maven-3.8.4\maven_resp" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Program Files/apache-maven-3.8.4" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="E:\Program Files\apache-maven-3.8.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="250FG11d4CPOxtzKgv1HcZv0VJE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="HotelAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hotel-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.itcast.hotel.HotelAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c1c44b33-6e1f-4480-9c2b-8de27b478e00" name="Changes" comment="" />
+      <created>1644655998960</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644655998960</updated>
+      <workItem from="1644656000082" duration="875000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

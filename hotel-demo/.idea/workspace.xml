@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="776da806-bfda-4bfe-ad1a-c949068f6f78" name="Changes" comment="elasticsearch实现小项目">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/constants/RabbitMqEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/constants/RabbitMqEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/controller/HotelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/pojo/HotelDoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/pojo/HotelDoc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/service/IHotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/service/IHotelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/service/impl/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/service/impl/HotelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/itcast/hotel/HotelDocumentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/itcast/hotel/HotelDocumentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/controller/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/controller/HotelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/pojo/HotelDoc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/pojo/HotelDoc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/service/IHotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/service/IHotelService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/service/impl/HotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/service/impl/HotelService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/itcast/hotel/HotelDocumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/itcast/hotel/HotelDocumentTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="776da806-bfda-4bfe-ad1a-c949068f6f78" name="Changes" comment="mysql 与 es同步" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +179,7 @@
       <workItem from="1644464026624" duration="197000" />
       <workItem from="1644464238639" duration="11341000" />
       <workItem from="1644539884261" duration="14976000" />
-      <workItem from="1644624853111" duration="15342000" />
+      <workItem from="1644624853111" duration="15424000" />
     </task>
     <task id="LOCAL-00001" summary="elasticsearch入门">
       <created>1644496033399</created>
@@ -211,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644582329803</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mysql 与 es同步">
+      <created>1644657777096</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644657777096</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +222,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="elasticsearch入门" />
     <MESSAGE value="elasticsearch实现小项目" />
-    <option name="LAST_COMMIT_MESSAGE" value="elasticsearch实现小项目" />
+    <MESSAGE value="mysql 与 es同步" />
+    <option name="LAST_COMMIT_MESSAGE" value="mysql 与 es同步" />
   </component>
 </project>
