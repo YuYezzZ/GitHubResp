@@ -23,7 +23,7 @@ import static cn.itcast.hotel.constants.HotelConstants.MAPPING_TEMPLATE;
  * @version: 1.0
  */
 
-public class HotelIndexTest {
+public class  HotelIndexTest {
     private RestHighLevelClient restHighLevelClient;
 
     @Test

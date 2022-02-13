@@ -7,6 +7,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @MapperScan(basePackages = "cn.itcast.hotel.mapper")
 @SpringBootApplication
@@ -22,5 +23,10 @@ public class HotelAdminApplication {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
         return interceptor;
+    }
+    //mq
+    @Bean
+    public RestTemplate RestTemplate(){
+        return  new RestTemplate();
     }
 }

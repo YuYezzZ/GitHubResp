@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="776da806-bfda-4bfe-ad1a-c949068f6f78" name="Changes" comment="mysql 与 es同步" />
+    <list default="true" id="776da806-bfda-4bfe-ad1a-c949068f6f78" name="Changes" comment="mysql 与 es同步">
+      <change afterPath="$PROJECT_DIR$/../hotel-admin/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/HotelAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/HotelAdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/web/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/web/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/constants/RabbitMqEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/itcast/hotel/HotelIndexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/itcast/hotel/HotelIndexTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mq-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mq-demo/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,9 +50,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\Program Files\apache-maven-3.8.4\maven_resp" />
+        <option name="localRepository" value="E:\Program Files\apache-maven-3.8.4\mvn_resp" />
         <option name="mavenHome" value="$PROJECT_DIR$/../../../Program Files/apache-maven-3.8.4" />
-        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="E:\Program Files\apache-maven-3.8.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -61,8 +75,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hotel-admin" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -159,8 +173,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HotelDocumentTest.searchSuggestionDocument" />
         <item itemvalue="JUnit.HotelDocumentTest.addBulkHotelDocument" />
+        <item itemvalue="JUnit.HotelDocumentTest.searchSuggestionDocument" />
         <item itemvalue="JUnit.HotelDocumentTest.searchHighlightHotelDocument" />
         <item itemvalue="JUnit.HotelDocumentTest.searchPageHotelDocument" />
         <item itemvalue="JUnit.HotelDocumentTest.searchBoolHotelDocument" />
@@ -180,6 +194,8 @@
       <workItem from="1644464238639" duration="11341000" />
       <workItem from="1644539884261" duration="14976000" />
       <workItem from="1644624853111" duration="15424000" />
+      <workItem from="1644720110004" duration="5476000" />
+      <workItem from="1644743294097" duration="3130000" />
     </task>
     <task id="LOCAL-00001" summary="elasticsearch入门">
       <created>1644496033399</created>
@@ -218,6 +234,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="elasticsearch入门" />
