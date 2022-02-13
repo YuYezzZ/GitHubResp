@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="776da806-bfda-4bfe-ad1a-c949068f6f78" name="Changes" comment="mysql 与 es同步">
-      <change afterPath="$PROJECT_DIR$/../hotel-admin/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/HotelAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/HotelAdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/web/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/web/HotelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/constants/RabbitMqEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/itcast/hotel/HotelIndexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/itcast/hotel/HotelIndexTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mq-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mq-demo/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="776da806-bfda-4bfe-ad1a-c949068f6f78" name="Changes" comment="旅游demo实现mq消息队列" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,6 +181,7 @@
       <workItem from="1644624853111" duration="15424000" />
       <workItem from="1644720110004" duration="5476000" />
       <workItem from="1644743294097" duration="3130000" />
+      <workItem from="1644795635217" duration="110000" />
     </task>
     <task id="LOCAL-00001" summary="elasticsearch入门">
       <created>1644496033399</created>
@@ -218,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644657777096</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="旅游demo实现mq消息队列">
+      <created>1644795693734</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1644795693734</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +233,7 @@
     <MESSAGE value="elasticsearch入门" />
     <MESSAGE value="elasticsearch实现小项目" />
     <MESSAGE value="mysql 与 es同步" />
-    <option name="LAST_COMMIT_MESSAGE" value="mysql 与 es同步" />
+    <MESSAGE value="旅游demo实现mq消息队列" />
+    <option name="LAST_COMMIT_MESSAGE" value="旅游demo实现mq消息队列" />
   </component>
 </project>
