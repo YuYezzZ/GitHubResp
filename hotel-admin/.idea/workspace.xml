@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1c44b33-6e1f-4480-9c2b-8de27b478e00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="c1c44b33-6e1f-4480-9c2b-8de27b478e00" name="Changes" comment="酒店后台管理代码">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/HotelAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/HotelAdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/web/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/web/HotelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-demo/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../hotel-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/Listenner/RabbitMQListenner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-demo/src/main/java/cn/itcast/hotel/constants/RabbitMqEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-demo/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mq-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mq-demo/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +24,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\Program Files\apache-maven-3.8.4\mvn_resp" />
+        <option name="localRepository" value="E:\Program Files\apache-maven-3.8.4\maven_resp" />
         <option name="mavenHome" value="$PROJECT_DIR$/../../../Program Files/apache-maven-3.8.4" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="E:\Program Files\apache-maven-3.8.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -48,13 +40,8 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -80,6 +67,7 @@
       <workItem from="1644720118416" duration="748000" />
       <workItem from="1644726373200" duration="1853000" />
       <workItem from="1644743223599" duration="1187000" />
+      <workItem from="1644890256575" duration="630000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="776da806-bfda-4bfe-ad1a-c949068f6f78" name="Changes" comment="旅游demo实现mq消息队列" />
+    <list default="true" id="776da806-bfda-4bfe-ad1a-c949068f6f78" name="Changes" comment="旅游demo实现mq消息队列">
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,6 +185,7 @@
       <workItem from="1644720110004" duration="5476000" />
       <workItem from="1644743294097" duration="3130000" />
       <workItem from="1644795635217" duration="110000" />
+      <workItem from="1644799620514" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="elasticsearch入门">
       <created>1644496033399</created>
@@ -227,7 +231,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="elasticsearch入门" />
