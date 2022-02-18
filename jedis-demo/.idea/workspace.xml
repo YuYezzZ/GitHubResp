@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e143d7a-8b75-4bf0-a344-319a43648798" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-demo/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hotel-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-demo/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5e143d7a-8b75-4bf0-a344-319a43648798" name="Changes" comment="jedis入门">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +118,17 @@
       <updated>1644890295790</updated>
       <workItem from="1644890297173" duration="7146000" />
       <workItem from="1644926092078" duration="6000" />
+      <workItem from="1644926105362" duration="96000" />
+      <workItem from="1645149848356" duration="40000" />
     </task>
+    <task id="LOCAL-00001" summary="jedis入门">
+      <created>1644926143305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644926143305</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,5 +144,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="jedis入门" />
+    <option name="LAST_COMMIT_MESSAGE" value="jedis入门" />
   </component>
 </project>

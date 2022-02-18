@@ -1,0 +1,3 @@
+com\yuye\service\UserService.class
+com\yuye\controller\UserController.class
+com\yuye\DubboWebApplication.class
