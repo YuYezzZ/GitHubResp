@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c77b231-b0d8-4272-aa55-f94d0c72a6f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../jedis-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jedis-demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dubbo-web/src/main/java/com/yuye" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -118,6 +118,7 @@
       <workItem from="1645151243780" duration="881000" />
       <workItem from="1645152144396" duration="1054000" />
       <workItem from="1645153220223" duration="9169000" />
+      <workItem from="1645180134756" duration="3025000" />
     </task>
     <servers />
   </component>
@@ -134,5 +135,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
