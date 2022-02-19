@@ -1,5 +1,6 @@
 package com.yuye;
 
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Description: com.yuye
  * @version: 1.0
  */
+@EnableDubbo
 @SpringBootApplication
 public class DubboWebApplication {
     //程序入口

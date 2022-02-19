@@ -54,7 +54,8 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.3.14" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.14" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.3.14" level="project" />
-    <orderEntry type="module" module-name="dubbo-service" />
+    <orderEntry type="module" module-name="dubbo-interface" />
+    <orderEntry type="module" module-name="dubbo-pojo" />
     <orderEntry type="library" name="Maven: org.apache.dubbo:dubbo:2.7.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.14" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.20.0-GA" level="project" />

@@ -102,5 +102,7 @@
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.56" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.3.14" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.3.14" level="project" />
+    <orderEntry type="module" module-name="dubbo-interface" />
+    <orderEntry type="module" module-name="dubbo-pojo" />
   </component>
 </module>

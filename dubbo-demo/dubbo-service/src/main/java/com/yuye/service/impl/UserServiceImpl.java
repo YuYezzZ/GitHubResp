@@ -1,5 +1,6 @@
 package com.yuye.service.impl;
 
+import com.yuye.pojo.User;
 import com.yuye.service.UserService;
 import org.apache.dubbo.config.annotation.Service;
 
@@ -9,10 +10,17 @@ import org.apache.dubbo.config.annotation.Service;
  * @Description: com.yuye.service.impl
  * @version: 1.0
  */
-@Service
+@Service(timeout = 3000 , retries = 0)
 public class UserServiceImpl implements UserService {
+
     @Override
     public String sayHello() {
-        return "hello dubbo ~";
+        System.out.println("hello");
+        return "hello dubbo~";
+    }
+
+    @Override
+    public User getUserById(int id) {
+        return new User(1,"zhangsan",25);
     }
 }
