@@ -4,33 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c77b231-b0d8-4272-aa55-f94d0c72a6f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="1c77b231-b0d8-4272-aa55-f94d0c72a6f7" name="Changes" comment="dubbo简单入门全部代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-service/dubbo-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-service/dubbo-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-service/src/main/java/com/yuye/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-service/src/main/java/com/yuye/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-service/src/main/java/com/yuye/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-service/target/classes/com/yuye/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-service/target/classes/com/yuye/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-service/target/classes/com/yuye/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/dubbo-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-web/dubbo-web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/src/main/java/com/yuye/DubboWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-web/src/main/java/com/yuye/DubboWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/src/main/java/com/yuye/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-web/src/main/java/com/yuye/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/src/main/java/com/yuye/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-web/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/target/classes/com/yuye/DubboWebApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-web/target/classes/com/yuye/DubboWebApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/target/classes/com/yuye/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-web/target/classes/com/yuye/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/target/classes/com/yuye/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,13 +60,14 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowleetcode.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -160,8 +136,21 @@
       <workItem from="1645153220223" duration="9169000" />
       <workItem from="1645180134756" duration="3025000" />
       <workItem from="1645229913557" duration="5325000" />
-      <workItem from="1645240156112" duration="8515000" />
+      <workItem from="1645240156112" duration="8579000" />
+      <workItem from="1645411463739" duration="2930000" />
+      <workItem from="1645415510458" duration="2610000" />
+      <workItem from="1645425384597" duration="806000" />
+      <workItem from="1645426324076" duration="2262000" />
+      <workItem from="1645511693895" duration="72000" />
     </task>
+    <task id="LOCAL-00001" summary="dubbo简单入门全部代码">
+      <created>1645262864217</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645262864217</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,5 +166,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dubbo简单入门全部代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="dubbo简单入门全部代码" />
   </component>
 </project>

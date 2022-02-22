@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81bf8006-ac5a-4c69-bc08-d4183283b2fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CuratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CuratorWatchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorWatchTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorWatchTest$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorWatchTest$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorWatchTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dubbo-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-demo/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\Program Files\apache-maven-3.8.4\mvn_resp" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Program Files/apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="E:\Program Files\apache-maven-3.8.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="25SDr3mN6gjg4m3rt5pR8EqaQWm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JavaFile\IDEA_workspace\curator-zk\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CuratorWatchTest.testTreeCache">
+    <configuration name="CuratorTest.testDeleteBackground" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="curator-zk" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CuratorTest" />
+      <option name="METHOD_NAME" value="testDeleteBackground" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CuratorTest.testDeleteGuaranteed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="curator-zk" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CuratorTest" />
+      <option name="METHOD_NAME" value="testDeleteGuaranteed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CuratorWatchTest.testNodeCache" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="curator-zk" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CuratorWatchTest" />
+      <option name="METHOD_NAME" value="testNodeCache" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CuratorWatchTest.testPathChildrenCache" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="curator-zk" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CuratorWatchTest" />
+      <option name="METHOD_NAME" value="testPathChildrenCache" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CuratorWatchTest.testTreeCache" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="curator-zk" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CuratorWatchTest" />
+      <option name="METHOD_NAME" value="testTreeCache" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CuratorWatchTest.testTreeCache" />
+        <item itemvalue="JUnit.CuratorWatchTest.testPathChildrenCache" />
+        <item itemvalue="JUnit.CuratorWatchTest.testNodeCache" />
+        <item itemvalue="JUnit.CuratorTest.testDeleteBackground" />
+        <item itemvalue="JUnit.CuratorTest.testDeleteGuaranteed" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81bf8006-ac5a-4c69-bc08-d4183283b2fd" name="Changes" comment="" />
+      <created>1645511790207</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645511790207</updated>
+      <workItem from="1645511791387" duration="374000" />
+      <workItem from="1645512184869" duration="9084000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
