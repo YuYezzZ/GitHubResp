@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81bf8006-ac5a-4c69-bc08-d4183283b2fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CuratorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CuratorWatchTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorTest$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorWatchTest$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorWatchTest$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorWatchTest$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/CuratorWatchTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dubbo-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-demo/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="81bf8006-ac5a-4c69-bc08-d4183283b2fd" name="Changes" comment="zookeeper简单入门">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,22 +59,25 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CuratorWatchTest.testTreeCache">
-    <configuration name="CuratorTest.testDeleteBackground" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CuratorTest.testCreate">
+    <configuration name="Sale" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yuye.Sale" />
       <module name="curator-zk" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CuratorTest" />
-      <option name="METHOD_NAME" value="testDeleteBackground" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yuye.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CuratorTest.testDeleteGuaranteed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CuratorTest.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="curator-zk" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CuratorTest" />
-      <option name="METHOD_NAME" value="testDeleteGuaranteed" />
+      <option name="METHOD_NAME" value="testCreate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CuratorTest.testCreate" />
+        <item itemvalue="Application.Sale" />
         <item itemvalue="JUnit.CuratorWatchTest.testTreeCache" />
         <item itemvalue="JUnit.CuratorWatchTest.testPathChildrenCache" />
         <item itemvalue="JUnit.CuratorWatchTest.testNodeCache" />
-        <item itemvalue="JUnit.CuratorTest.testDeleteBackground" />
-        <item itemvalue="JUnit.CuratorTest.testDeleteGuaranteed" />
       </list>
     </recent_temporary>
   </component>
@@ -145,8 +132,18 @@
       <option name="presentableId" value="Default" />
       <updated>1645511790207</updated>
       <workItem from="1645511791387" duration="374000" />
-      <workItem from="1645512184869" duration="9084000" />
+      <workItem from="1645512184869" duration="9161000" />
+      <workItem from="1645749296938" duration="6690000" />
+      <workItem from="1646017677182" duration="24000" />
     </task>
+    <task id="LOCAL-00001" summary="zookeeper简单入门">
+      <created>1645532759202</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645532759202</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,5 +159,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="zookeeper简单入门" />
+    <option name="LAST_COMMIT_MESSAGE" value="zookeeper简单入门" />
   </component>
 </project>
