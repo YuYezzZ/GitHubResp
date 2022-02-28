@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81bf8006-ac5a-4c69-bc08-d4183283b2fd" name="Changes" comment="zookeeper简单入门">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="81bf8006-ac5a-4c69-bc08-d4183283b2fd" name="Changes" comment="zookeeper分布式锁" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,6 +133,7 @@
       <workItem from="1645512184869" duration="9161000" />
       <workItem from="1645749296938" duration="6690000" />
       <workItem from="1646017677182" duration="24000" />
+      <workItem from="1646017708690" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="zookeeper简单入门">
       <created>1645532759202</created>
@@ -143,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645532759202</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="zookeeper分布式锁">
+      <created>1646017753643</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646017753643</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +168,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="zookeeper简单入门" />
-    <option name="LAST_COMMIT_MESSAGE" value="zookeeper简单入门" />
+    <MESSAGE value="zookeeper分布式锁" />
+    <option name="LAST_COMMIT_MESSAGE" value="zookeeper分布式锁" />
   </component>
 </project>
