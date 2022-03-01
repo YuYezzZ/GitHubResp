@@ -1,0 +1,22 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: ihrm-company
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.127.129:3306/ihrm?serverTimezone=GMT&useSSL=false&useServerPrepStmts=true
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    #initial-size: 5
+    #min-idle: 5
+    #max-active: 20
+    #max-wait: 60000
+    #test-while-idle: true
+    #time-between-eviction-runs-millis: 60000
+    #min-evictable-idle-time-millis: 30000
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: co_
