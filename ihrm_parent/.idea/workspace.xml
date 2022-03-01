@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5c5aab7-826e-408c-80ac-0eb76159f7f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../mongodb-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mongodb-demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dubbo-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ihrm_company/src/main/java/com/yuye/ihrm/CompanyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ihrm_company/src/main/java/com/yuye/ihrm/CompanyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ihrm_company/src/main/java/com/yuye/ihrm/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ihrm_company/src/main/java/com/yuye/ihrm/controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ihrm_company/target/classes/com/yuye/ihrm/CompanyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/ihrm_company/target/classes/com/yuye/ihrm/CompanyApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ihrm_company/target/classes/com/yuye/ihrm/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ihrm_company/target/classes/com/yuye/ihrm/controller/CompanyController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ihrm_company/src/main/java/com/yuye/ihrm/domain" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -115,6 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646102292437</updated>
       <workItem from="1646102293663" duration="14164000" />
+      <workItem from="1646130135656" duration="3879000" />
     </task>
     <servers />
   </component>
@@ -131,5 +139,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

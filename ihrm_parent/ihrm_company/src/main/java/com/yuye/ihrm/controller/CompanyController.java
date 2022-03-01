@@ -25,11 +25,13 @@ public class CompanyController {
     private CompanyMapper companyMapper;
     @GetMapping
     public Result getAll(){
+//        int i = 1 / 0;
         List<Company> companies = companyMapper.selectList(null);
         return new Result(ResultCode.SUCCESS,companies);
     }
     @GetMapping("/{id}")
-    public Result getById(@PathVariable("id") String id){
+    public Result getById(@PathVariable("id") String id) /*throws CommonException*/ {
+//        throw new CommonException(ResultCode.FAIL);
         Company company = companyMapper.selectById(id);
         return new Result(ResultCode.SUCCESS,company);
     }

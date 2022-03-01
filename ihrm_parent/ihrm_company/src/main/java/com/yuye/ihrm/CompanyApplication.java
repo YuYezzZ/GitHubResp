@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
  * @Description: com.yuye.ihrm
  * @version: 1.0
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.yuye.ihrm")
 public class CompanyApplication {
     //程序入口
     public static void main(String[] args) {
