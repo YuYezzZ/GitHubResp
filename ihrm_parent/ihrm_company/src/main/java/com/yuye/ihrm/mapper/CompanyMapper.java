@@ -1,8 +1,12 @@
 package com.yuye.ihrm.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.yuye.ihrm.domain.Company;
-import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @Auther: yuye
@@ -10,6 +14,20 @@ import org.apache.ibatis.annotations.Mapper;
  * @Description: com.yuye.ihrm.mapper
  * @version: 1.0
  */
-@Mapper
-public interface CompanyMapper extends BaseMapper<Company> {
+@Repository
+public interface CompanyMapper  {
+    @Select("select * from co_company")
+    @ResultMap("CompanyResultMap")
+    List<Company> selectList();
+
+    @Select("select * from co_company where id = #{id}")
+    @ResultMap("CompanyResultMap")
+    Company selectById(String id);
+
+    int insert(Company company);
+
+    int updateById(Company company);
+
+    @Delete("delete * from co_company where id = #{id}")
+    int deleteById(String id);
 }

@@ -21,7 +21,7 @@ public class TestCompany {
     @Test
     //测试链接数据库
     public void testConn(){
-        List<Company> companies = companyMapper.selectList(null);
+        List<Company> companies = companyMapper.selectList();
         System.out.println(companies);
     }
 }

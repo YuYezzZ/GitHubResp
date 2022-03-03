@@ -1,9 +1,9 @@
 package com.yuye.ihrm.domain;
 
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -11,10 +11,11 @@ import java.util.Date;
 
 @Component
 @Data
-public class Company extends Model<Company> implements Serializable{
+@NoArgsConstructor
+@AllArgsConstructor
+public class Company  implements Serializable{
     private static final long serialVersionUID = 594829320797158219L;
     //ID
-    @TableId
     private String id;
     /**
      * 公司名称

@@ -1,14 +1,11 @@
 package com.yuye.pojo;
 
-import org.springframework.stereotype.Component;
-
 /**
  * @Auther: yuye
  * @Date: 2022/1/17 - 01 - 17 - 19:27
  * @Description: com.yuye.pojo
  * @version: 1.0
  */
-@Component
 public class Book {
     private Integer id;
     private String type;

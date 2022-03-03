@@ -1,7 +1,7 @@
 package com.yuye.ihrm;
 
-import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
+import com.yuye.ihrm.common.utils.IdWorker;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -13,15 +13,14 @@ import org.springframework.context.annotation.Bean;
  * @version: 1.0
  */
 @SpringBootApplication(scanBasePackages = "com.yuye.ihrm")
+@MapperScan("com.yuye.ihrm.mapper")
 public class CompanyApplication {
     //程序入口
     public static void main(String[] args) {
         SpringApplication.run(CompanyApplication.class,args);
     }
     @Bean
-    public MybatisPlusInterceptor mybatisPlusInterceptor() {
-        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
-        interceptor.addInnerInterceptor(new PaginationInnerInterceptor());
-        return interceptor;
+    public IdWorker idWorker(){
+        return new IdWorker();
     }
 }

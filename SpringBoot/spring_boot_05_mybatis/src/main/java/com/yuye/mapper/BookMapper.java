@@ -2,7 +2,6 @@ package com.yuye.mapper;
 
 import com.yuye.pojo.Book;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -13,8 +12,7 @@ import java.util.List;
  * @version: 1.0
  */
 @Mapper
-public interface BookDao {
-    @Select("select * from t_book")
+public interface BookMapper {
     List<Book> findAll();
 }
 

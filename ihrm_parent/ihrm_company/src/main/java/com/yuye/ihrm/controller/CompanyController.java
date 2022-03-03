@@ -1,16 +1,10 @@
 package com.yuye.ihrm.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.yuye.ihrm.common.entity.PageResult;
 import com.yuye.ihrm.common.entity.Result;
-import com.yuye.ihrm.common.entity.ResultCode;
 import com.yuye.ihrm.domain.Company;
-import com.yuye.ihrm.mapper.CompanyMapper;
+import com.yuye.ihrm.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * @Auther: yuye
@@ -18,45 +12,38 @@ import java.util.List;
  * @Description: com.yuye.ihrm.controller
  * @version: 1.0
  */
+//解决跨域
+@CrossOrigin
 @RestController
 @RequestMapping("/company")
 public class CompanyController {
     @Autowired
-    private CompanyMapper companyMapper;
+    private CompanyService companyService;
     @GetMapping
     public Result getAll(){
 //        int i = 1 / 0;
-        List<Company> companies = companyMapper.selectList(null);
-        return new Result(ResultCode.SUCCESS,companies);
+        return companyService.selectList();
     }
     @GetMapping("/{id}")
     public Result getById(@PathVariable("id") String id) /*throws CommonException*/ {
 //        throw new CommonException(ResultCode.FAIL);
-        Company company = companyMapper.selectById(id);
-        return new Result(ResultCode.SUCCESS,company);
+        return companyService.selectById(id);
     }
     @PostMapping
     public Result saveCompany(@RequestBody Company company){
-        int insert = companyMapper.insert(company);
-        return insert==1?new Result(ResultCode.SUCCESS):new Result(ResultCode.FAIL);
+        return companyService.insert(company);
     }
     @PutMapping()
     public Result updateCompany(@RequestBody Company company){
-        int update = companyMapper.updateById(company);
-        return update==1?new Result(ResultCode.SUCCESS):new Result(ResultCode.FAIL);
+        return companyService.updateById(company);
     }
     @DeleteMapping("/{id}")
     public Result deleteById(@PathVariable("id") String id ){
-        int delete = companyMapper.deleteById(id);
-        return delete==1?new Result(ResultCode.SUCCESS):new Result(ResultCode.FAIL);
+        return companyService.deleteById(id);
     }
-    @PostMapping("/search/{page}/{size}")
+    /*@PostMapping("/search/{page}/{size}")
     public PageResult<Company> searchPage(@PathVariable("page") int page,@PathVariable("size")int size){
-        Page<Company> companyPage = new Page<Company>(page-1, size);
-        QueryWrapper<Company> companyQueryWrapper = new QueryWrapper<>();
-        Page<Company> pageResult = companyMapper.selectPage(companyPage, null);
-        long total = pageResult.getTotal();
-        List<Company> companies = pageResult.getRecords();
-        return new PageResult<Company>(total,companies);
-    }
+
+        return companyService.selectPage(page,size);
+    }*/
 }
