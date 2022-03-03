@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuye.ihrm.mapper.DepartmentMapper">
+    <resultMap id="departmentResultMap" type="department">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="company_id"  property="companyId"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="manager_id"  property="managerId"/>
+        <result column="create_time"  property="createTime"/>
+    </resultMap>
+    <sql id="departmentColumns">
+        id,
+        company_id,
+        parent_id,
+        name,
+        code,
+        category,
+        manager_id,
+        city,
+        introduce,
+        create_time,
+        manager
+    </sql>
+    <sql id="departmentProperty">
+        #{id},
+        #{companyId},
+        #{parentId},
+        #{name},
+        #{code},
+        #{category},
+        #{managerId},
+        #{city},
+        #{introduce},
+        #{createUime},
+        #{manager}
+    </sql>
+    <insert id="insert" parameterType="department">
+        insert into co_department <include refid="departmentColumns"></include>
+        values <include refid="departmentProperty"></include>
+    </insert>
+    <update id="updateById" parameterType="department">
+        insert into co_department <include refid="departmentColumns"></include>
+        values <include refid="departmentProperty"></include>
+        where id = #{id}
+    </update>
+
+</mapper>

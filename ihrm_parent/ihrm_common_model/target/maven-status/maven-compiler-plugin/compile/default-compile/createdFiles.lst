@@ -1,0 +1,8 @@
+com\yuye\ihrm\domain\Department.class
+com\yuye\ihrm\domain\PermissionApi.class
+com\yuye\ihrm\domain\PermissionMenu.class
+com\yuye\ihrm\domain\PermissionPoint.class
+com\yuye\ihrm\domain\Role.class
+com\yuye\ihrm\domain\Permission.class
+com\yuye\ihrm\domain\Company.class
+com\yuye\ihrm\domain\User.class
